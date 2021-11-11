@@ -1,0 +1,38 @@
+<div class="content-news">
+
+<div class="detail">
+  <span>{{dateTime}}</span>
+  <div>
+    <span>Filtros seleccionados: </span>
+    <div class="group-filter">
+      <div class="filter-selected" *ngFor="let item of filtros">
+          {{item.label}}
+      </div>
+  </div>
+  </div>
+
+  <span>
+      Resultados encontrados: {{datos.totalResults}}
+  </span>
+
+</div>
+
+<article class="news" *ngFor="let item of datos.articles">
+  <div class="information-news">
+    <div class="image-news">
+      <img [src]="item.urlToImage" alt="News">
+    </div>
+    <div class="description-news">
+      <h3 class="title-news">{{item.title}}</h3>
+      <p class="description-news">{{item.description}}</p>
+      <a [href]="item.url" target="_blank" class="url-news">Leer más</a>
+    </div>
+  </div>
+
+  <div class="line">
+
+  </div>
+
+</article>
+
+</div>
