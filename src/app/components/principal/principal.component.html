@@ -1,7 +1,7 @@
 <div class="content">
     <header class="header">
         <section class="search-category">
-            <input class="input-search" type="search" placeholder="Buscar...">
+            <input class="input-search" type="search" placeholder="Buscar..."  name="wordSearch" [(ngModel)]="wordSearch">
             <span class="filtros" (click)="showCategory()" [ngStyle]="{'color':filtroCategory!='Categorías' ?'#28DE83':'#FFF'}">{{filtroCategory}}</span>
             <span class="filtros" (click)="showCountry()" [ngStyle]="{'color':filtroCountry!='Países' ?'#28DE83':'#FFF'}">{{filtroCountry}}</span>
             <button class="btn" (click)="searchNews()">Buscar</button>

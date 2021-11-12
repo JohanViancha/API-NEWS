@@ -10,15 +10,15 @@ export class AppComponent {
   title = 'news-api';
 
   news = [];
-  filtros=[];
+  filtros:any=[];
   constructor(private service_news: NewsServiceService){
 
   }
   buscarNoticias(parametros:any){
-    this.filtros = Object.values(parametros);
+    this.filtros = Object.values(parametros).filter((element)=>element);
     console.log(this.filtros);
      this.service_news.getNoticias(parametros).subscribe(data=>{
-      this.news = data;
+        this.news = data;
     });
   }
 }

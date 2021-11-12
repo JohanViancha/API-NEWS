@@ -8,12 +8,18 @@
   gap: 20px;
 }
 
+.datetime{
+  color: gray;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 .description-news{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.1rem;
 }
 
 .filter-selected{
@@ -44,18 +50,30 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17px;
 }
 
 .title-news{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: #21915A;
 }
 
 .information-news{
   display: flex;
   flex-direction: row;
 }
-
+.image-news{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+}
 .image-news img{
   width:200px;
+}
+
+.url-news{
+  text-decoration: none;
 }

@@ -17,7 +17,6 @@ export class NewsComponent implements OnInit {
     this.filtros = [];
     let date = new Date();
     this.dateTime = `${this.service_datetime.day.find(day=>day.value==date.getDay()).name}, ${date.getDate()} de ${this.service_datetime.month.find(month=>month.value==date.getUTCMonth()).name} del ${date.getFullYear()}`;
-    console.log(this.dateTime) ;
    }
 
 

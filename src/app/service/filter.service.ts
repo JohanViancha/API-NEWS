@@ -6,19 +6,19 @@ import { Injectable } from '@angular/core';
 export class FilterService {
 
   categories:any[]=[
-    {value:'general', label:'General'},
-    {value:'business',label:'Negocios'},
-    {value:'entertainment',label:'Entretenimiento'},
-    {value:'technology',label:'Tecnología'},
-    {value:'science',label:'Ciencia'},
+    {category:'general', label:'General'},
+    {category:'business',label:'Negocios'},
+    {category:'entertainment',label:'Entretenimiento'},
+    {category:'technology',label:'Tecnología'},
+    {category:'science',label:'Ciencia'},
   ];
 
   countries:any[]=[
-    {value:'us', label:'Estados Unidos'},
-    {value:'ar',label:'Argentina'},
-    {value:'co',label:'Colombia'},
-    {value:'mx',label:'México'},
-    {value:'ve',label:'Venezuela'}
+    {country:'us', label:'Estados Unidos'},
+    {country:'ar',label:'Argentina'},
+    {country:'co',label:'Colombia'},
+    {country:'mx',label:'México'},
+    {country:'ve',label:'Venezuela'}
   ];
 
 

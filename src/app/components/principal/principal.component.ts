@@ -17,6 +17,7 @@ export class PrincipalComponent implements OnInit {
   filtroCountry:string;
   countries:any[];
   categories:any[];
+  wordSearch:any;
 
   constructor(private serviceFilter:FilterService) {
     this.filtroCategory = 'Categorías';
@@ -25,8 +26,8 @@ export class PrincipalComponent implements OnInit {
     this.showMenuCountry = false;
     this.countries = serviceFilter.getCountries();
     this.categories = serviceFilter.getCategories();
-
-  }
+    this.wordSearch = undefined;
+    }
 
   ngOnInit(): void {
   }
@@ -44,10 +45,16 @@ export class PrincipalComponent implements OnInit {
   searchNews(){
     this.showMenuCategory = false;
     this.showMenuCountry = false;
-    let paremetros = {
-      'category':this.categories.find(category=>category.label == this.filtroCategory),
-      'country':this.countries.find(country=>country.label == this.filtroCountry),
+    if(this.wordSearch){
+      this.wordSearch = {'q':this.wordSearch};
     }
+    let paremetros = {
+      'word':this.wordSearch,
+      'category':this.categories.find(category=>category.label == this.filtroCategory),
+      'country':this.countries.find(country=>country.label == this.filtroCountry)
+
+    }
+
     this.parametroSeleccionados.emit(paremetros);
   }
 
