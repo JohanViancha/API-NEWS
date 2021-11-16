@@ -6,11 +6,9 @@
     <span>Filtros seleccionados: </span>
     <div class="group-filter">
       <div class="filter-selected" *ngFor="let item of filtros">
-          {{item.label}}
+          {{item.label}} &nbsp;<i class="fas fa-times-circle close-filter" (click)="deleteFilter(item)"></i>
       </div>
-      <div class="filter-selected" *ngIf="filtros.q">
-        {{filtros.q}}
-    </div>
+
   </div>
   </div>
 

@@ -12,14 +12,16 @@ export class NewsServiceService {
   url:string = 'https://newsapi.org/v2/top-headlines?';
 
   getNoticias(parametros:any[]):Observable<any>{
-    const peticion = `${this.url}${this.setUpSearch(parametros)}apiKey=${this.key}`;
+    const peticion = `${this.url}${this.setUpUrl(parametros)}apiKey=${this.key}`;
+    console.log(peticion);
     return this.httpcliente.get(peticion);
   }
 
-  setUpSearch(parametros:any[]):any{
+  setUpUrl(parametros:any[]):any{
       let paramValues = Object.values(parametros).filter((element)=>element);
       let stringUrl = '';
       paramValues.forEach(element => stringUrl+= `${Object.keys(element)[0]}=${Object.values(element)[0]}&`);
+      console.log(stringUrl);
       return stringUrl;
   }
 

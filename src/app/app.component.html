@@ -2,6 +2,7 @@
   <h1>NEWS-API</h1>
 </div>
 
-<app-principal (parametroSeleccionados)="buscarNoticias($event)"></app-principal>
-<app-news [datos]="news" [filtros]="filtros"></app-news>
+<app-principal (parametroSeleccionados)="buscarNoticias($event)" [filtroEliminar]="filtroEliminar"></app-principal>
+<app-news (filtro)="eliminarFiltro($event)" [datos]="news" [filtros]="filtros"></app-news>
+<app-spinner *ngIf="loading"></app-spinner>
 

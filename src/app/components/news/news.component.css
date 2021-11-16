@@ -77,3 +77,6 @@
 .url-news{
   text-decoration: none;
 }
+.close-filter{
+  cursor: pointer;
+}
